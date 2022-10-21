@@ -1,6 +1,6 @@
 # Project REST-Rant
 
-REST-Rant is an app where users can review restaurants.
+**REST-Rant is an app where users can review restaurants.**
 
 ## Routes
 
@@ -13,3 +13,12 @@ REST-Rant is an app where users can review restaurants.
 | GET           | /places/:id      | Details about a particular place        |
 | PUT           | /places/:id      | Update a particular place               |
 | GET           | /places/:id/edit | Form page for editing an existing place |
+
+## Data Stored About Each Place/Restaurant
+
+| Data     | Datatype |
+| :---     | :---     |
+| Name     | *string* |
+| City     | *string* |
+| Cuisines | *string* |
+| Picture  | *string* |
