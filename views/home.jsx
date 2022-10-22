@@ -5,17 +5,21 @@ function home() {
     return (
         <Def>
             <main>
-                <h1>HOME</h1>
-                <div>
-                    <img className="centered-image" src="./images/home_hero_image.jpg" alt="Home Hero Image" />
-                    <div className="text-center">
-                    Photo by <a href="https://unsplash.com/@brookelark">Brooke Lark</a> on <a href="https://unsplash.com/">Unsplash</a>
+                <h1>REST-Rant</h1>
+                <h3 id="hero-headline">An App Where Users Can Review Restaurants!</h3>
+                <div id="hero-section">
+                    <img id="hero-image" src="./images/home_hero_image.jpg" alt="Home Hero Image" />
+                    <div id="hero-credit">
+                        Photo by <a href="https://unsplash.com/@brookelark">Brooke Lark</a> on <a href="https://unsplash.com/">Unsplash</a>
                     </div>
                 </div>
 
-                <a href="/places">
-                    <button className='btn btn-primary'>Places Page</button>
-                </a>
+                <div id="call-to-action">
+                    <a href="/places">
+                        <button className='btn btn-primary btn-lg'>PLACES PAGE</button>
+                    </a>
+                </div>
+
             </main>
         </Def>
     )
