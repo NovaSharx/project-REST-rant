@@ -8,7 +8,7 @@ function home() {
                 <h1>HOME</h1>
                 <div>
                     <img className="centered-image" src="./images/home_hero_image.jpg" alt="Home Hero Image" />
-                    <div>
+                    <div className="text-center">
                     Photo by <a href="https://unsplash.com/@brookelark">Brooke Lark</a> on <a href="https://unsplash.com/">Unsplash</a>
                     </div>
                 </div>

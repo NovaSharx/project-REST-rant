@@ -3,13 +3,21 @@ h1 {
     color: cornflowerblue;
 }
 
-p {
-    text-align: center;
-}
-
 .centered-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.places-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    object-fit: cover;
+    width: 80%;
+    height: 500px;
+    border: 10px outset cornflowerblue;
+    border-radius: 30px;
 }
