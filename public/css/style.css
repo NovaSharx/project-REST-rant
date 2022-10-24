@@ -1,3 +1,15 @@
+html, body {
+    height: 100%;
+}
+
+.content {
+    min-height: 100%;
+}
+
+.content-inside {
+    padding-bottom: 30px;
+}
+
 h1 {
     text-align: center;
     color: cornflowerblue;
@@ -9,6 +21,7 @@ h1 {
     top: 0;
     z-index: -1;
 }
+
 #hero-section::before {
     position: absolute;
     width: 100%;
@@ -54,4 +67,11 @@ h1 {
     height: 500px;
     border: 10px outset cornflowerblue;
     border-radius: 30px;
+}
+
+footer {
+    height: 30px;
+    margin-top: -30px;
+    background-color: black;
+    color: white;
 }

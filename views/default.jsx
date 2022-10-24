@@ -11,7 +11,13 @@ function Def(html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                {html.children}
+                <div className="content">
+                    <div className="content-inside"></div>
+                    {html.children}
+                </div>
+                <footer>
+                    LinkedIn Link Here
+                </footer>
             </body>
         </html>
     )
