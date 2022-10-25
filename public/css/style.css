@@ -2,6 +2,41 @@ html, body {
     height: 100%;
 }
 
+body {
+    background-color: lightblue;
+    text-align: center;
+}
+
+form {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav {
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
 .content {
     min-height: 100%;
 }
