@@ -19,8 +19,9 @@ function Def(html) {
                             <li> <a href="/places/new">Add Place</a> </li>
                         </ul>
                     </nav>
-                    <div className="content-inside"></div>
-                    {html.children}
+                    <div className="content-inside">
+                        {html.children}
+                    </div>
                 </div>
                 <footer>
                     LinkedIn Link Here
