@@ -50,8 +50,19 @@ router.get('/:d/edit', (req, res) => {
 })
 
 // DELETE PLACE
-router.delete('/:d', (req, res) => {
-  res.redirect('/places')
+router.delete('/:id', (req, res) => {
+  console.log(req.params)
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(id, 1)
+    res.redirect('/places')
+  }
 })
 
 module.exports = router
