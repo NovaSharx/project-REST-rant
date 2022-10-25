@@ -40,8 +40,18 @@ router.get('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.render('places/show', {place: places[id]})
+    res.render('places/show', {place: places[id], id})
   }
+})
+
+// EDIT PLACE
+router.get('/:d/edit', (req, res) => {
+  res.render('places/edit')
+})
+
+// DELETE PLACE
+router.delete('/:d', (req, res) => {
+  res.redirect('/places')
 })
 
 module.exports = router
