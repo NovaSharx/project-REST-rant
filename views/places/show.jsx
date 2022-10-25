@@ -1,15 +1,14 @@
 const React = require('react')
 const Def = require('../default')
 
-function showPage() {
+function show() {
     return (
         <Def>
             <main>
-                <h1>PLACES SHOW PAGE</h1>
-                <p>Details page for one place</p>
+                <h1>Show Page</h1>
             </main>
         </Def>
     )
 }
 
-module.exports = showPage
+module.exports = show
