@@ -7,14 +7,12 @@ router.get('/new', (req, res) => {
 })
 
 // PLACES INDEX
-router.get('/', (req, res) => {  
-    res.render('places/index', {places})
+router.get('/', (req, res) => {
+  res.render('places/index', { places })
 })
 
 // CREATE NEW PLACE
 router.post('/', (req, res) => {
-
-  console.log(req.body)
 
   if (!req.body.pic) {
     // Default image if one is not provided
@@ -40,18 +38,40 @@ router.get('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.render('places/show', {place: places[id], id})
+    res.render('places/show', { place: places[id], id })
   }
 })
 
 // EDIT PLACE
-router.get('/:d/edit', (req, res) => {
-  res.render('places/edit')
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id], id})
+  }
+})
+
+// UPDATE PLACE
+router.put('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.send('PUT STUB PAGE')
+  }
 })
 
 // DELETE PLACE
 router.delete('/:id', (req, res) => {
-  console.log(req.params)
   let id = Number(req.params.id)
   if (isNaN(id)) {
     res.render('error404')
