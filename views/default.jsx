@@ -24,7 +24,7 @@ function Def(html) {
                     </div>
                 </div>
                 <footer>
-                    LinkedIn Link Here
+                    Author: Davin Jones
                 </footer>
             </body>
         </html>
