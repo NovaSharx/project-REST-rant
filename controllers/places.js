@@ -66,7 +66,21 @@ router.put('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.send('PUT STUB PAGE')
+    // Dig into req.body and make sure the data is valid
+    if (!req.body.pic) {
+      // Default image if one is not provided
+      req.body.pic = 'http://placekitten.com/400/400'
+    }
+    if (!req.body.city) {
+      req.body.city = 'Anytown'
+    }
+    if (!req.body.state) {
+      req.body.state = 'USA'
+    }
+
+    // Save the new data into places[id]
+    places[id] = req.body
+    res.redirect(`/places/${id}`)
   }
 })
 
