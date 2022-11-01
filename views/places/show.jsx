@@ -6,7 +6,7 @@ function show(data) {
         <Def>
             <main className='text-center'>
                 <h1>{data.place.name}</h1>
-                <p >Located in {data.place.city}, {data.place.state}</p>
+                <h3>Located in {data.place.city}, {data.place.state}</h3>
                 <div>
                     <h2>Rating</h2>
                     <p>Not Rated</p>
@@ -14,7 +14,8 @@ function show(data) {
                 <div>
                     <img className='showpage-image' src={data.place.pic} alt={data.place.name + ' Image'} />
                     <h2>Description</h2>
-                    <p>{data.place.cuisines}</p>
+                    <h3>{data.place.showEstablished()}</h3>
+                    <h4>Serving {data.place.cuisines}</h4>
                 </div>
                 <div>
                     <h2>Comments</h2>
