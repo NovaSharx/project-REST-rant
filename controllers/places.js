@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
           message += `${err.errors[field].message}`
         }
 
-        res.render('places/new', { message })
+        res.render('places/new', { message: message })
       }
       else {
         console.log('err', err)
@@ -48,6 +48,7 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
     .then(place => {
+      console.log(place.id)
       res.render('places/show', { place })
     })
     .catch(err => {
@@ -63,7 +64,14 @@ router.put('/:id', (req, res) => {
 
 // DELETE PLACE
 router.delete('/:id', (req, res) => {
-  res.send('DELETE /places/:id stub')
+  db.Place.findByIdAndDelete(req.params.id)
+    .then(deletedPlace => {
+      res.status(303).redirect('/places')
+    })
+    .catch((err) => {
+      console.log(err)
+      res.render('error404')
+    })
 })
 
 // EDIT PLACE
