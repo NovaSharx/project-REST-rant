@@ -14,9 +14,9 @@ function Def(html) {
                 <div className="content">
                     <nav>
                         <ul>
-                            <li> <a href="/">Home</a> </li>
-                            <li> <a href="/places">Places</a> </li>
-                            <li> <a href="/places/new">Add Place</a> </li>
+                            <li> <a href="/" key='home'>Home</a> </li>
+                            <li> <a href="/places" key='places'>Places</a> </li>
+                            <li> <a href="/places/new" key='add-place'>Add Place</a> </li>
                         </ul>
                     </nav>
                     <div className="content-inside">
