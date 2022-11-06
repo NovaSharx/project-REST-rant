@@ -119,10 +119,17 @@ router.post('/:id/comment', (req, res) => {
   })
 })
 
-
 // DELETE COMMENT
 router.delete('/:id/comment/:commentId', (req, res) => {
-  res.send('GET /places/:id/comment/:commentId stub')
+  db.Comment.findByIdAndDelete(req.params.commentId)
+  .then(response => {
+    console.log(`Response: ${response}`)
+    res.redirect(`/places/${req.params.id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.render('error404')
+  })
 })
 
 module.exports = router
