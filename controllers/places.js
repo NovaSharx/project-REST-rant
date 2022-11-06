@@ -59,7 +59,14 @@ router.get('/:id', (req, res) => {
 
 // UPDATE PLACE
 router.put('/:id', (req, res) => {
-  res.send('PUT /places/:id stub')
+  db.Place.findByIdAndUpdate(req.params.id, req.body)
+  .then(() => {
+    res.redirect(`/places/${req.params.id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.render('error404')
+  })
 })
 
 // DELETE PLACE
@@ -86,6 +93,7 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
+// CREATE COMMENT
 router.post('/:id/comment', (req, res) => {
   req.body.rant = req.body.rant ? true : false
   console.log(req.body)
@@ -111,6 +119,8 @@ router.post('/:id/comment', (req, res) => {
   })
 })
 
+
+// DELETE COMMENT
 router.delete('/:id/comment/:commentId', (req, res) => {
   res.send('GET /places/:id/comment/:commentId stub')
 })
